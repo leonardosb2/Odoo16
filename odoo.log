@@ -1,0 +1,173 @@
+2024-08-27 16:13:44,346 4516 INFO ? odoo: Odoo version 16.0+e-20240827 
+2024-08-27 16:13:44,346 4516 INFO ? odoo: Using configuration file at C:\Users\Develoop\Documents\ODOO\server\odoo.conf 
+2024-08-27 16:13:44,346 4516 INFO ? odoo: addons paths: ['C:\\Users\\Develoop\\Documents\\ODOO\\server\\odoo\\addons', 'c:\\users\\develoop\\documents\\odoo\\sessions\\addons\\16.0', 'c:\\users\\develoop\\documents\\odoo\\server\\odoo\\addons'] 
+2024-08-27 16:13:44,347 4516 INFO ? odoo: database: openpg@localhost:5432 
+2024-08-27 16:13:45,082 4516 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at wkhtmltopdf.exe 
+2024-08-27 16:13:47,870 4516 INFO ? odoo.service.server: Initiating shutdown 
+2024-08-27 16:13:48,025 4516 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-08-27 16:14:14,171 5756 INFO ? odoo: Odoo version 16.0+e-20240827 
+2024-08-27 16:14:14,171 5756 INFO ? odoo: Using configuration file at C:\Users\Develoop\Documents\ODOO\server\odoo.conf 
+2024-08-27 16:14:14,171 5756 INFO ? odoo: addons paths: ['C:\\Users\\Develoop\\Documents\\ODOO\\server\\odoo\\addons', 'c:\\users\\develoop\\documents\\odoo\\sessions\\addons\\16.0', 'c:\\users\\develoop\\documents\\odoo\\server\\odoo\\addons'] 
+2024-08-27 16:14:14,171 5756 INFO ? odoo: database: openpg@localhost:5432 
+2024-08-27 16:14:14,340 5756 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\Users\Develoop\Documents\ODOO\thirdparty\wkhtmltopdf.exe 
+2024-08-27 16:14:14,534 5756 INFO ? odoo.service.server: HTTP service (werkzeug) running on LEO:8069 
+2024-08-27 16:14:32,198 5756 ERROR ? odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\http.py", line 2054, in __call__
+    request._post_init()
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\http.py", line 1230, in _post_init
+    self.session, self.db = self._get_session_and_dbname()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\http.py", line 1250, in _get_session_and_dbname
+    all_dbs = db_list(force=True, host=host)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\http.py", line 303, in db_list
+    dbs = odoo.service.db.list_dbs(force)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\service\db.py", line 407, in list_dbs
+    with closing(db.cursor()) as cr:
+                 ^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\sql_db.py", line 740, in cursor
+    return Cursor(self.__pool, self.__dbname, self.__dsn)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\sql_db.py", line 267, in __init__
+    self._cnx = pool.borrow(dsn)
+                ^^^^^^^^^^^^^^^^
+  File "<decorator-gen-2>", line 2, in borrow
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\sql_db.py", line 668, in borrow
+    result = psycopg2.connect(
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\python\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf3 in position 85: invalid continuation byte
+2024-08-27 16:14:32,202 5756 INFO ? werkzeug: 127.0.0.1 - - [27/Aug/2024 16:14:32] "GET / HTTP/1.1" 500 - 0 0.000 0.067
+2024-08-27 16:14:32,606 5756 ERROR ? odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\http.py", line 2054, in __call__
+    request._post_init()
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\http.py", line 1230, in _post_init
+    self.session, self.db = self._get_session_and_dbname()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\http.py", line 1250, in _get_session_and_dbname
+    all_dbs = db_list(force=True, host=host)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\http.py", line 303, in db_list
+    dbs = odoo.service.db.list_dbs(force)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\service\db.py", line 407, in list_dbs
+    with closing(db.cursor()) as cr:
+                 ^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\sql_db.py", line 740, in cursor
+    return Cursor(self.__pool, self.__dbname, self.__dsn)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\sql_db.py", line 267, in __init__
+    self._cnx = pool.borrow(dsn)
+                ^^^^^^^^^^^^^^^^
+  File "<decorator-gen-2>", line 2, in borrow
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\sql_db.py", line 668, in borrow
+    result = psycopg2.connect(
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\python\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf3 in position 85: invalid continuation byte
+2024-08-27 16:14:32,608 5756 INFO ? werkzeug: 127.0.0.1 - - [27/Aug/2024 16:14:32] "GET /favicon.ico HTTP/1.1" 500 - 0 0.000 0.042
+2024-08-27 16:17:23,072 5756 ERROR ? odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\http.py", line 2054, in __call__
+    request._post_init()
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\http.py", line 1230, in _post_init
+    self.session, self.db = self._get_session_and_dbname()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\http.py", line 1250, in _get_session_and_dbname
+    all_dbs = db_list(force=True, host=host)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\http.py", line 303, in db_list
+    dbs = odoo.service.db.list_dbs(force)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\service\db.py", line 407, in list_dbs
+    with closing(db.cursor()) as cr:
+                 ^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\sql_db.py", line 740, in cursor
+    return Cursor(self.__pool, self.__dbname, self.__dsn)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\sql_db.py", line 267, in __init__
+    self._cnx = pool.borrow(dsn)
+                ^^^^^^^^^^^^^^^^
+  File "<decorator-gen-2>", line 2, in borrow
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\sql_db.py", line 668, in borrow
+    result = psycopg2.connect(
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\python\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf3 in position 85: invalid continuation byte
+2024-08-27 16:17:23,073 5756 INFO ? werkzeug: 127.0.0.1 - - [27/Aug/2024 16:17:23] "GET / HTTP/1.1" 500 - 0 0.000 0.038
+2024-08-27 16:17:23,202 5756 ERROR ? odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\http.py", line 2054, in __call__
+    request._post_init()
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\http.py", line 1230, in _post_init
+    self.session, self.db = self._get_session_and_dbname()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\http.py", line 1250, in _get_session_and_dbname
+    all_dbs = db_list(force=True, host=host)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\http.py", line 303, in db_list
+    dbs = odoo.service.db.list_dbs(force)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\service\db.py", line 407, in list_dbs
+    with closing(db.cursor()) as cr:
+                 ^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\sql_db.py", line 740, in cursor
+    return Cursor(self.__pool, self.__dbname, self.__dsn)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\sql_db.py", line 267, in __init__
+    self._cnx = pool.borrow(dsn)
+                ^^^^^^^^^^^^^^^^
+  File "<decorator-gen-2>", line 2, in borrow
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\server\odoo\sql_db.py", line 668, in borrow
+    result = psycopg2.connect(
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Develoop\Documents\ODOO\python\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf3 in position 85: invalid continuation byte
+2024-08-27 16:17:23,203 5756 INFO ? werkzeug: 127.0.0.1 - - [27/Aug/2024 16:17:23] "GET /favicon.ico HTTP/1.1" 500 - 0 0.000 0.049
+2024-08-27 16:17:57,715 5756 INFO ? odoo.service.server: Initiating shutdown 
+2024-08-27 16:17:57,715 5756 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-08-27 16:17:58,726 5756 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 0 connections  
+2024-08-27 16:47:38,748 10656 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.request:INFO" 
+2024-08-27 16:47:38,748 10656 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.response:INFO" 
+2024-08-27 16:47:38,749 10656 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2024-08-27 16:47:38,749 10656 DEBUG ? odoo.netsvc: logger level set: "odoo:DEBUG" 
+2024-08-27 16:47:38,749 10656 DEBUG ? odoo.netsvc: logger level set: "odoo.sql_db:INFO" 
+2024-08-27 16:47:38,749 10656 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2024-08-27 16:49:53,231 4940 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.request:INFO" 
+2024-08-27 16:49:53,232 4940 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.response:INFO" 
+2024-08-27 16:49:53,232 4940 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2024-08-27 16:49:53,232 4940 DEBUG ? odoo.netsvc: logger level set: "odoo:DEBUG" 
+2024-08-27 16:49:53,232 4940 DEBUG ? odoo.netsvc: logger level set: "odoo.sql_db:INFO" 
+2024-08-27 16:49:53,232 4940 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2024-08-27 16:49:53,233 4940 INFO ? odoo: Odoo version 16.0+e-20240827 
+2024-08-27 16:49:53,233 4940 INFO ? odoo: Using configuration file at C:\Users\Develoop\Documents\ODOO\server\odoo.conf 
+2024-08-27 16:49:53,233 4940 INFO ? odoo: addons paths: ['C:\\Users\\Develoop\\Documents\\ODOO\\server\\odoo\\addons', 'c:\\users\\develoop\\documents\\odoo\\sessions\\addons\\16.0', 'c:\\users\\develoop\\documents\\odoo\\server\\odoo\\addons'] 
+2024-08-27 16:49:53,233 4940 INFO ? odoo: database: root@localhost:5432 
+2024-08-27 16:49:53,849 4940 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\Users\Develoop\Documents\ODOO\thirdparty\wkhtmltopdf.exe 
+2024-08-27 16:49:54,998 4940 DEBUG ? odoo.service.server: Setting signal handlers 
+2024-08-27 16:49:55,002 4940 DEBUG ? odoo.service.server: cron0 started! 
+2024-08-27 16:49:55,004 4940 DEBUG ? odoo.service.server: cron1 started! 
+2024-08-27 16:49:55,006 4940 INFO ? odoo.service.server: HTTP service (werkzeug) running on LEO:8069 

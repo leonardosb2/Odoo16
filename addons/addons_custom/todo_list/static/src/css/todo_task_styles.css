@@ -1,0 +1,5 @@
+/* static/src/css/todo_task_styles.css */
+.todo-task-done .o_field_widget {
+    text-decoration: line-through;
+    color: gray;
+}
